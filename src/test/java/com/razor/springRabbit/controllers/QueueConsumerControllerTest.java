@@ -9,10 +9,11 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.ui.ModelMap;
 
 @RunWith(MockitoJUnitRunner.class)
-public class HelloControllerTest {
+public class QueueConsumerControllerTest
+{
 
     @Spy
-    HelloController helloController;
+    QueueConsumerController queueConsumerController;
 
     @Mock
     ModelMap modelMap;
@@ -23,6 +24,6 @@ public class HelloControllerTest {
 
     @Test
     public void testPrintWelcome() {
-        helloController.printWelcome(modelMap);
+        queueConsumerController.printWelcome(modelMap);
     }
 }
